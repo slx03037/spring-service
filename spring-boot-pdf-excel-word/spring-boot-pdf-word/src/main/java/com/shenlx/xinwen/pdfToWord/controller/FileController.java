@@ -1,8 +1,8 @@
 package com.shenlx.xinwen.pdfToWord.controller;
 
 import com.shenlx.xinwen.pdfToWord.utils.CommonUtil;
-import com.spire.pdf.FileFormat;
-import com.spire.pdf.PdfDocument;
+//import com.spire.pdf.FileFormat;
+//import com.spire.pdf.PdfDocument;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,16 +31,16 @@ public class FileController {
         File file = CommonUtil.multipartToFile(pdfFile);
 
         // 创建Pdf工具类对象
-        PdfDocument pdf = new PdfDocument();
+        //PdfDocument pdf = new PdfDocument();
 
         // 拼接Word文件名
         String projectPath = System.getProperty("user.dir");
         String name = file.getName();
-        pdf.loadFromFile(projectPath + "/" + name);
+        //pdf.loadFromFile(projectPath + "/" + name);
 
         //保存为Word格式
         String fileName = file.getName().substring(0, file.getName().lastIndexOf(".")) + ".docx";
-        pdf.saveToFile(fileName, FileFormat.DOCX);
+        //pdf.saveToFile(fileName, FileFormat.DOCX);
 
         // 将问文件转为字节流返回供前端下载
         File wordFile = new File(fileName);
