@@ -1,0 +1,1 @@
+org.springframework.context.ApplicationListener=com.shenlx.xinwen.shardingsphere.cutom.key.generator.redis.RestTemplateReadyListener

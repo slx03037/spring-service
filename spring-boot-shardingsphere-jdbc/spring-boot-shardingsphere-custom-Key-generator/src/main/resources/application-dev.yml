@@ -1,0 +1,84 @@
+spring:
+  # 一个实体类对应两张表，覆盖
+  main:
+    allow-bean-definition-overriding: true
+  sharding-sphere:
+    # 数据源配置
+    datasource:
+      # 数据源名称，多数据源以逗号分隔
+      names: db0
+      db0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://192.168.1.73:3306/sharding_sphere_db1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+        username: root
+        password: NJben@1234
+    # 分片规则配置
+    rules:
+      sharding:
+        # 分布式序列算法配置
+        keyGenerators:
+          # COSID生成算法
+          custom-generate-key:
+            type: custom_generate_key
+#            props:
+#              id-name: share
+#              as-string: false
+        tables:
+          # 逻辑表名称
+          tbl_order_info:
+            key-generate-strategy:
+              column: order_id
+              key-generator-name: custom-generate-key
+            # 行表达式标识符可以使用 ${...} 或 $->{...}，但前者与 Spring 本身的属性文件占位符冲突，因此在 Spring 环境中使用行表达式标识符建议使用 $->{...}
+            actual-data-nodes: db0.tbl_order_info_$->{0..11}
+            # 分表策略
+            table-strategy:
+              standard:
+                # 分片列名称
+                sharding-column: order_type
+                # 分片算法名称
+                sharding-algorithm-name: table-inline
+                # 分片算法是 his_month_sharding, 这个名称是在下面配置的
+                #sharding-algorithm-name: his_order_type_sharding
+        # 分片算法配置
+        sharding-algorithms:
+          table-inline:
+#            # 分片算法类型
+#            type: INLINE
+#            props:
+#              # 分片算法的行表达式
+#              algorithm-expression: tbl_order_info_$->{order_type % 2}
+            type: HIS_ORDER_TYPE_SPI_BASED
+            props:
+              sharding-count: 12  # 表示有2个分片表数量
+          ##分片算法名称
+#          his_order_type_sharding:
+#            # 分片算法类型，这个type是我们的分片算法实现类中 getType()的返回值，SPI适用于这种方式
+#            type: HIS_ORDER_TYPE_SPI_BASED
+      # 属性配置
+    props:
+      # 展示修改以后的sql语句
+      sql-show: true
+  redis:
+    db: 0
+    enable: true
+    host: 47.110.154.49
+    password: Ben@1234
+    port: 8379
+    timeout: 0
+    pool-config:
+      max-total: 256
+      max-idle=128: 128
+      min-idle: 8
+      max-wait-millis: 1000
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      num-tests-per-eviction-run: 8
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+
+mybatis:
+  ##config-location: classpath:/mybatis-config.xml
+  mapper-locations: classpath:/mapper/**/*.xml

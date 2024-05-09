@@ -12,19 +12,11 @@
     <artifactId>spring-boot-shardingsphere-jdbc-order</artifactId>
 
     <dependencies>
-    <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter</artifactId>
-    </dependency>
-
-    <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-test</artifactId>
-    <scope>test</scope>
-    </dependency>
+        <!-- 引入的包 ShardingSphere -->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>
+            <version>5.2.1</version>
         </dependency>
     </dependencies>
 </project>

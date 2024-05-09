@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.shenlx.xinwen</groupId>
+        <artifactId>spring-boot-shardingsphere-jdbc</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <groupId>com.shenlx.xinwen</groupId>
+    <artifactId>spring-boot-shardingsphere-custom-Key-generator</artifactId>
+    <name>spring-boot-sharding-sphere-custom-Key-generator</name>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    <dependencies>
+        <!-- 引入的包 ShardingSphere -->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>
+            <version>5.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.33</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shardingsphere</groupId>-->
+<!--            <artifactId>sharding-core-api</artifactId>-->
+<!--            <version>4.1.1</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.data</groupId>-->
+<!--            <artifactId>spring-data-redis</artifactId>-->
+<!--        </dependency>-->
+    </dependencies>
+</project>
