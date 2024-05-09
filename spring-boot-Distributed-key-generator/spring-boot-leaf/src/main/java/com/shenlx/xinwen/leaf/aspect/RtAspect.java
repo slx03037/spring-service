@@ -10,6 +10,7 @@ import cn.hutool.core.date.TimeInterval;
 import com.shenlx.xinwen.leaf.common.Result;
 import com.shenlx.xinwen.leaf.common.enums.Status;
 import com.shenlx.xinwen.leaf.segment.SegmentService;
+import com.shenlx.xinwen.leaf.segment.SegmentServiceImpl;
 import com.shenlx.xinwen.leaf.web.context.RequestParamContext;
 import com.shenlx.xinwen.leaf.web.context.TraceIdHolder;
 import lombok.extern.slf4j.Slf4j;

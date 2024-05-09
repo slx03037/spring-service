@@ -22,10 +22,10 @@ import java.util.Properties;
  */
 @Slf4j
 @Service
-public class SegmentService {
+public class SegmentServiceImpl implements SegmentService{
     private final IDGen idGen;
 
-    public SegmentService() throws SQLException, InitException {
+    public SegmentServiceImpl() throws SQLException, InitException {
         Properties properties = PropertyFactory.getProperties();
         boolean flag = Boolean.parseBoolean(properties.getProperty(Constants.LEAF_SEGMENT_ENABLE, "true"));
         if (flag) {
@@ -53,10 +53,12 @@ public class SegmentService {
         }
     }
 
+    @Override
     public Result getId(String key) {
         return idGen.get(key);
     }
 
+    @Override
     public SegmentIDGenImpl getIdGen() {
         if (idGen instanceof SegmentIDGenImpl) {
             return (SegmentIDGenImpl) idGen;
