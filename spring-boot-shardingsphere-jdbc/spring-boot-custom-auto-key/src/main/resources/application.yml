@@ -1,0 +1,57 @@
+spring:
+  # 一个实体类对应两张表，覆盖
+  main:
+    allow-bean-definition-overriding: true
+  sharding-sphere:
+    datasource:
+      names: db0
+      db0:
+        url: jdbc:mysql://192.168.1.73:3306/sharding_sphere_db1?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: NJben@1234
+        # password: admin@2023
+        type: com.alibaba.druid.pool.DruidDataSource
+        druid:
+          initial-size: 5
+          min-idle: 5
+          max-active: 20
+          max-wait: 30000
+          time-between-eviction-runs-millis: 60000
+          min-evictable-idle-time-millis: 300000
+          validation-query: select '1' from dual
+          test-while-idle: true
+          test-on-borrow: false
+          test-on-return: false
+          pool-prepared-statements: true
+          max-open-prepared-statements: 20
+          max-pool-prepared-statement-per-connection-size: 20
+    rules:
+      sharding:
+        tables:
+          # 逻辑表名称
+          tbl_order_info:
+            # 行表达式标识符可以使用 ${...} 或 $->{...}，但前者与 Spring 本身的属性文件占位符冲突，因此在 Spring 环境中使用行表达式标识符建议使用 $->{...}
+            actual-data-nodes: db0.tbl_order_info_$->{0..11}
+            # 分表策略
+            table-strategy:
+              standard:
+                # 分片列名称
+                sharding-column: order_type
+                # 分片算法名称
+                sharding-algorithm-name: table-inline
+        # 分片算法配置
+        sharding-algorithms:
+          table-inline:
+            # 分片算法类型
+            type: INLINE
+            props:
+              # 分片算法的行表达式
+              algorithm-expression: tbl_order_info_$->{order_type % 11}
+    # 属性配置
+    props:
+      # 展示修改以后的sql语句
+      sql-show: true
+
+mybatis:
+  mapper-locations: classpath:/mapper/**/*.xml

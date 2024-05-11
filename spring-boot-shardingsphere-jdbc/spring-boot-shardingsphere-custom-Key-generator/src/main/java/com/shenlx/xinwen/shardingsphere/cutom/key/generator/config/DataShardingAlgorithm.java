@@ -1,15 +1,18 @@
 package com.shenlx.xinwen.shardingsphere.cutom.key.generator.config;
 
 import com.shenlx.xinwen.shardingsphere.cutom.key.generator.enums.IllegalTypeEnum;
-import com.shenlx.xinwen.shardingsphere.cutom.key.generator.redis.RestTemplateReadyListener;
-import com.shenlx.xinwen.shardingsphere.cutom.key.generator.service.OrderService;
+import com.shenlx.xinwen.shardingsphere.cutom.key.generator.config.bean.RestTemplateReadyListener;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shardingsphere.sharding.api.sharding.standard.PreciseShardingValue;
 import org.apache.shardingsphere.sharding.api.sharding.standard.RangeShardingValue;
 import org.apache.shardingsphere.sharding.api.sharding.standard.StandardShardingAlgorithm;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -22,11 +25,12 @@ import java.util.Properties;
  */
 @Getter
 @Slf4j
-public class DataMonthShardingAlgorithm implements StandardShardingAlgorithm<Long> {
-
-    private OrderService orderService;
+public class DataShardingAlgorithm implements StandardShardingAlgorithm<Integer> {
 
     private Properties props;
+
+    private final static String PREFIX_STR="ORDER_TYPE";
+
 
     /**
      * 在配置文件中配置算法的时候会配置 props 参数，框架会将props中的配置放在 properties 参数中，并且初始化算法的时候被调用
@@ -46,14 +50,16 @@ public class DataMonthShardingAlgorithm implements StandardShardingAlgorithm<Lon
      * @return 结果表
      */
     @Override
-    public String doSharding(Collection<String> availableTargetNames, PreciseShardingValue<Long> shardingValue) {
-        Long value = shardingValue.getValue();
+    public String doSharding(Collection<String> availableTargetNames, PreciseShardingValue<Integer> shardingValue) {
+        log.warn("分表依据");
+        int value = shardingValue.getValue();
         // 根据精确值获取路由表
-        int  type= IllegalTypeEnum.gets((value));
-        Long code = generateKey()%2L;
+        int  type= IllegalTypeEnum.getType((value));
+
+        Long code = generateKey(String.valueOf(value))%2L;
         int  shardingSuffixValue=code==0L?type:++type;
         //根据id进行加一
-        String actuallyTableName = shardingValue.getLogicTableName() + shardingSuffixValue;
+        String actuallyTableName = shardingValue.getLogicTableName() +"_"+ shardingSuffixValue;
         if (availableTargetNames.contains(actuallyTableName)) {
             return actuallyTableName;
         }
@@ -73,11 +79,22 @@ public class DataMonthShardingAlgorithm implements StandardShardingAlgorithm<Lon
 //        log.warn("取余:{}",i);
 //    }
 
-    private Long generateKey(){
-        RedisTemplate redisTemplate = RestTemplateReadyListener.getRedisTemplateHolder().getRedisTemplate();
-        log.warn("redis:id:{}",redisTemplate.isExposeConnection());
-        Long code = orderService.generateHouseCode();
-        return code;
+    private Long generateKey(String type){
+        RedisTemplate redisTemplates = RestTemplateReadyListener.getRedisTemplateHolder().getRedisTemplate();
+        RestTemplate restTemplate=RestTemplateReadyListener.getRestTemplateHolder().getRestTemplate();
+        log.warn("redis:id:{}",redisTemplates.isExposeConnection());
+        String redisKey = PREFIX_STR + type;
+        Boolean b = redisTemplates.hasKey(redisKey);
+        ValueOperations<String, Integer> operations = redisTemplates.opsForValue();
+        if(!b){
+            ResponseEntity<Long> bean = restTemplate.getForEntity("localhost:8080/get/max", Long.class);
+            Long maxCode = bean.getBody();
+            operations.set(redisKey, maxCode.intValue());
+        }
+        Integer code = operations.get(redisKey);
+
+        log.warn("获取body");
+        return code.longValue();
     }
 
 
@@ -89,7 +106,7 @@ public class DataMonthShardingAlgorithm implements StandardShardingAlgorithm<Lon
      * @return 路由后的结果表
      */
     @Override
-    public Collection<String> doSharding(Collection<String> availableTargetNames, RangeShardingValue<Long> shardingValue) {
+    public Collection<String> doSharding(Collection<String> availableTargetNames, RangeShardingValue<Integer> shardingValue) {
         // 获取到范围查找的最小值，如果条件中没有最小值设置为 tableLowerDate
         //Date rangeLowerDate;
 //        if (shardingValue.getValueRange().hasLowerBound()) {

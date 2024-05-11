@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author shenlx
@@ -23,7 +24,10 @@ public class OrderController {
     @PostMapping("/order/add")
     private Object add(@RequestBody Order order){
         orderService.add(order);
-        return new HashMap<String,Integer>().put("code",200);
+        Map<String, Object> map = new HashMap<>();
+        map.put("code", 200);
+        map.put("msg", "操作成功");
+        return map;
     }
 
     @GetMapping("/order/listPage")

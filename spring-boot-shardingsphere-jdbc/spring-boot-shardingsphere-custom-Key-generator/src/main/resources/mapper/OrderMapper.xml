@@ -6,8 +6,8 @@
         SELECT count(*) FROM tbl_order_info
     </select>
     <insert id="insert" parameterType="com.shenlx.xinwen.shardingsphere.cutom.key.generator.entity.Order">
-        insert into  tbl_order_info(order_type,order_name,status)
-        values (#{orderType},#{orderName},#{status})
+        insert into  tbl_order_info(order_id,order_type,order_name,status)
+        values (#{orderId},#{orderType},#{orderName},#{status})
     </insert>
     <insert id="listPage" parameterType="int">
         select order_id,order_type order_name,status tbl_order_info

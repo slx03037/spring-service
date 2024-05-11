@@ -53,7 +53,7 @@ public enum IllegalTypeEnum {
         return null;
     }
 
-    public static int gets(Long code){
+    public static int getType(int code){
         for(IllegalTypeEnum illegalTypeEnum:values()){
             if(illegalTypeEnum.getCode()==code){
                 return illegalTypeEnum.getType();

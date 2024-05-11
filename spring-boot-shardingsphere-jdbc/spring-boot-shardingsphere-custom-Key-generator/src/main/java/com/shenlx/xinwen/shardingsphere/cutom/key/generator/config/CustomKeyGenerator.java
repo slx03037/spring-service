@@ -2,6 +2,7 @@ package com.shenlx.xinwen.shardingsphere.cutom.key.generator.config;
 
 
 import com.shenlx.xinwen.shardingsphere.cutom.key.generator.service.OrderService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shardingsphere.sharding.spi.KeyGenerateAlgorithm;
 import org.springframework.cache.interceptor.KeyGenerator;
 
@@ -14,9 +15,8 @@ import java.util.Properties;
  * @description
  * @date 2024/5/8 18:09
  */
+@Slf4j
 public class CustomKeyGenerator implements KeyGenerateAlgorithm {
-    @Resource
-    private OrderService orderService;
     private final static String type="custom_generate_key";
 
     /**
@@ -25,7 +25,8 @@ public class CustomKeyGenerator implements KeyGenerateAlgorithm {
      */
     @Override
     public Comparable<?> generateKey() {
-        return orderService.generateHouseCode();
+        log.warn("运行id自增");
+        return null;
     }
 
     @Override
@@ -43,6 +44,7 @@ public class CustomKeyGenerator implements KeyGenerateAlgorithm {
         //return KeyGenerateAlgorithm.super.getType();
         return "custom_generate_key";
     }
+
 
 
 }
