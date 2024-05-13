@@ -9,8 +9,10 @@
         insert into  tbl_order_info(order_id,order_type,order_name,status)
         values (#{orderId},#{orderType},#{orderName},#{status})
     </insert>
-    <insert id="listPage" parameterType="int">
-        select order_id,order_type order_name,status tbl_order_info
+    <select id="listPage" parameterType="int" resultType="com.shenlx.xinwen.shardingsphere.cutom.key.generator.entity.Order">
+        select `order_id` as orderId,`order_type` as orderType, `order_name` as orderName,`status` as status from tbl_order_info
+        where order_type=#{type}
+        order by order_id
         limit #{offset},#{pageSize}
-    </insert>
+    </select>
 </mapper>

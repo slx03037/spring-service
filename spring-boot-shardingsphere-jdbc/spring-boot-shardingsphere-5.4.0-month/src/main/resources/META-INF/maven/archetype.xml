@@ -1,0 +1,9 @@
+<archetype>
+  <id>spring-boot-shardingsphere-5.4.0-month</id>
+  <sources>
+    <source>src/main/java/App.java</source>
+  </sources>
+  <testSources>
+    <source>src/test/java/AppTest.java</source>
+  </testSources>
+</archetype>

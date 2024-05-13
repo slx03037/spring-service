@@ -1,7 +1,8 @@
-package com.shenlx.xinwen.shardingsphere.cutom.key.generator.controller;
+package com.shenlx.xinwen.shardingsphere.month.controller;
 
-import com.shenlx.xinwen.shardingsphere.cutom.key.generator.entity.Order;
-import com.shenlx.xinwen.shardingsphere.cutom.key.generator.service.OrderService;
+import com.shenlx.xinwen.shardingsphere.month.entity.Order;
+import com.shenlx.xinwen.shardingsphere.month.entity.OrderBO;
+import com.shenlx.xinwen.shardingsphere.month.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -19,7 +20,7 @@ public class OrderController {
     private OrderService orderService;
 
     @PostMapping("/order/add")
-    private Object add(@RequestBody Order order){
+    private Object add(@RequestBody OrderBO order){
         orderService.add(order);
         Map<String, Object> map = new HashMap<>();
         map.put("code", 200);

@@ -51,13 +51,13 @@ public class DataShardingAlgorithm implements StandardShardingAlgorithm<Integer>
      */
     @Override
     public String doSharding(Collection<String> availableTargetNames, PreciseShardingValue<Integer> shardingValue) {
-        log.warn("分表依据");
+        log.warn("分表依据:{}",availableTargetNames);
         int value = shardingValue.getValue();
         // 根据精确值获取路由表
         int  type= IllegalTypeEnum.getType((value));
 
         Long code = generateKey(String.valueOf(value))%2L;
-        int  shardingSuffixValue=code==0L?type:++type;
+        int  shardingSuffixValue=code==0L?type:++(type);
         //根据id进行加一
         String actuallyTableName = shardingValue.getLogicTableName() +"_"+ shardingSuffixValue;
         if (availableTargetNames.contains(actuallyTableName)) {
@@ -66,18 +66,6 @@ public class DataShardingAlgorithm implements StandardShardingAlgorithm<Integer>
         return null;
     }
 
-//    public static void main(String[]args){
-//        Long ss =1090L/100;
-//        log.warn("ss:{}",ss);
-//        int i = 0 % 2;
-//        int a=0;
-//        int b=0;
-//        a= 1%2==0?0:a++;
-//        log.warn("a:{}",a);
-//        b =1%2==0?0:++b;
-//        log.warn("b:{}",b);
-//        log.warn("取余:{}",i);
-//    }
 
     private Long generateKey(String type){
         RedisTemplate redisTemplates = RestTemplateReadyListener.getRedisTemplateHolder().getRedisTemplate();
@@ -107,6 +95,9 @@ public class DataShardingAlgorithm implements StandardShardingAlgorithm<Integer>
      */
     @Override
     public Collection<String> doSharding(Collection<String> availableTargetNames, RangeShardingValue<Integer> shardingValue) {
+        String logicTableName = shardingValue.getLogicTableName();
+        String columnName = shardingValue.getColumnName();
+        log.warn("数据查询");
         // 获取到范围查找的最小值，如果条件中没有最小值设置为 tableLowerDate
         //Date rangeLowerDate;
 //        if (shardingValue.getValueRange().hasLowerBound()) {
@@ -126,6 +117,7 @@ public class DataShardingAlgorithm implements StandardShardingAlgorithm<Integer>
 //        }
 //        rangeUpperDate = DateUtil.endOfMonth(rangeUpperDate);
         List<String> tableNames = new ArrayList<>();
+        log.warn("数据查询：{}",tableNames);
 //        // 过滤那些存在的表
 //        while (rangeLowerDate.before(rangeUpperDate)) {
 //            String actuallyTableName = shardingValue.getLogicTableName() + shardingSuffix(rangeLowerDate);

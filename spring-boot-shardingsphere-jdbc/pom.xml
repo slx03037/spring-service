@@ -7,6 +7,7 @@
         <module>spring-boot-shardingsphere-custom-Key-generator</module>
         <module>spring-boot-shardingsphere-custom</module>
         <module>spring-boot-custom-auto-key</module>
+        <module>spring-boot-shardingsphere-5.4.0-month</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

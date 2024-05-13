@@ -45,8 +45,8 @@ public class OrderService {
         orderMapper.insert(order);
     }
 
-    public List<Order> listPage(){
-      return  orderMapper.listPage(0,10);
+    public List<Order> listPage(Integer type){
+      return  orderMapper.listPage(0,10,type);
     }
 
     /**
