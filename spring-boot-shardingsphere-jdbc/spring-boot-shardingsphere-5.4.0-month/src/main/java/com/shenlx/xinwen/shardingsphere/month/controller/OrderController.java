@@ -29,7 +29,9 @@ public class OrderController {
     }
 
     @GetMapping("/order/listPage")
-    private Object listPage(@RequestParam("type")Integer type){
-        return orderService.listPage(type);
+    private Object listPage(@RequestParam(value = "type",required = false)Integer type
+            ,@RequestParam(value = "startTime",required = false)String startTime
+            ,@RequestParam(value = "endTime",required = false)String endTime){
+        return orderService.listPage(type,startTime,endTime);
     }
 }

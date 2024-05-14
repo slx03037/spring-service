@@ -5,6 +5,24 @@ spring:
   datasource:
     driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
     url: jdbc:shardingsphere:classpath:sharding.yaml
+  redis:
+    db: 0
+    enable: true
+    host: 192.168.1.73
+    password: NJben@1234
+    port: 6379
+    timeout: 0
+    pool-config:
+      max-total: 256
+      max-idle=128: 128
+      min-idle: 8
+      max-wait-millis: 1000
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      num-tests-per-eviction-run: 8
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
 
 mybatis:
   ##config-location: classpath:/mybatis-config.xml

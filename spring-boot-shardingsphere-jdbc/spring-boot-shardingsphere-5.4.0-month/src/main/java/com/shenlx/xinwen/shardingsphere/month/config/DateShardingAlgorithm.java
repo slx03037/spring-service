@@ -36,7 +36,7 @@ public class DateShardingAlgorithm implements StandardShardingAlgorithm<LocalDat
      */
     private final String TABLE_SPLIT_SYMBOL = "_";
 
-    private final String TABLE_SPLIT_SYMBOL_All = "t_user_";
+    private final String TABLE_SPLIT_SYMBOL_All = "tbl_order_info_";
 
     @Getter
     private Properties props;
@@ -55,6 +55,7 @@ public class DateShardingAlgorithm implements StandardShardingAlgorithm<LocalDat
 
         /// 打印分片信息
         log.info(">>>>>>>>>> 【INFO】精确分片，节点配置表名：{}", availableTargetNames);
+        //preciseShardingValue.getValue();
 
         LocalDateTime dateTime = preciseShardingValue.getValue();
         String resultTableName = logicTableName + "_" + dateTime.format(TABLE_SHARD_TIME_FORMATTER);
@@ -76,6 +77,14 @@ public class DateShardingAlgorithm implements StandardShardingAlgorithm<LocalDat
     public Collection<String> doSharding( Collection<String> availableTargetNames,  RangeShardingValue<LocalDateTime> rangeShardingValue) {
         String logicTableName = rangeShardingValue.getLogicTableName();
 
+        if (availableTargetNames.size() == 1) {
+            // 如果只有一个表，说明需要获取所有表名
+            List<String> allTableNameBySchema = ShardingAlgorithmTool.getAllTableNameBySchema(logicTableName);
+            availableTargetNames.clear();
+            availableTargetNames.addAll(allTableNameBySchema);
+            autoTablesAmount = allTableNameBySchema.size();
+        }
+
         /// 打印分片信息
         log.info(">>>>>>>>>> 【INFO】范围分片，节点配置表名：{}", availableTargetNames);
 
@@ -87,7 +96,7 @@ public class DateShardingAlgorithm implements StandardShardingAlgorithm<LocalDat
         // 获取最大值和最小值
         LocalDateTime min = hasLowerBound ? valueRange.lowerEndpoint() :getLowerEndpoint(availableTargetNames);
         LocalDateTime max = hasUpperBound ? valueRange.upperEndpoint() :getUpperEndpoint(availableTargetNames);
-        getUpperEndpoint(availableTargetNames);
+        //getUpperEndpoint(availableTargetNames);
         // 循环计算分表范围
         Set<String> resultTableNames = new LinkedHashSet<>();
         while (min.isBefore(max) || min.equals(max)) {
@@ -152,7 +161,7 @@ public class DateShardingAlgorithm implements StandardShardingAlgorithm<LocalDat
      */
     private LocalDateTime getLowerEndpoint(Collection<String> tableNames) {
         Optional<LocalDateTime> optional = tableNames.stream()
-                .map(o -> LocalDateTime.parse(o.replace(TABLE_SPLIT_SYMBOL, "") + "01 00:00:00", DATE_TIME_FORMATTER))
+                .map(o -> LocalDateTime.parse(o.replace(TABLE_SPLIT_SYMBOL_All, "") + "01 00:00:00", DATE_TIME_FORMATTER))
                 .min(Comparator.comparing(Function.identity()));
         if (optional.isPresent()) {
             return optional.get();

@@ -4,6 +4,8 @@ import com.shenlx.xinwen.shardingsphere.month.entity.Order;
 import com.shenlx.xinwen.shardingsphere.month.entity.OrderBO;
 import com.shenlx.xinwen.shardingsphere.month.mapper.OrderMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
@@ -23,8 +25,8 @@ import java.util.List;
 public class OrderService {
     private final static String INTRODUCTION_HOUSE_PREFIX="ORDER_TYPE";
 
-//    @Resource
-//    private RedisTemplate<String, Integer> redisTemplate;
+    @Resource
+    private RedisTemplate<String, Integer> redisTemplate;
 
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
@@ -52,8 +54,17 @@ public class OrderService {
         orderMapper.insert(order);
     }
 
-    public List<Order> listPage(Integer type){
-      return  orderMapper.listPage(0,10,type);
+    public List<Order> listPage(Integer type,String startTime,String endTime){
+        LocalDateTime startDate =null;
+        LocalDateTime endDate =LocalDateTime.now();
+        if(StringUtils.isNotBlank(startTime)){
+            startDate=LocalDateTime.parse(startTime,DATE_TIME_FORMATTER);
+        }
+        if(StringUtils.isNotBlank(endTime)){
+            endDate=LocalDateTime.parse(endTime,DATE_TIME_FORMATTER);
+        }
+
+      return  orderMapper.listPage(0,10,type,startDate,endDate);
     }
 
     /**
@@ -62,17 +73,19 @@ public class OrderService {
      * @return
      */
     public Long generateHouseCode(String type) {
-        String cacheKey = INTRODUCTION_HOUSE_PREFIX+type;
-//        Boolean hasKey = redisTemplate.hasKey(cacheKey);
-//        //Long maxCode=0L;
-//        ValueOperations<String, Integer> operations = redisTemplate.opsForValue();
-//
-//        if (!hasKey) {
-//            Long maxCode = orderMapper.queryMaxCode();
-//            operations.set(cacheKey, maxCode.intValue());
-//        }
-//        Long increment = operations.increment(cacheKey);
-        //log.warn("获取的自增id:{}",increment);
-        return  1L;
+        String cacheKey = INTRODUCTION_HOUSE_PREFIX+type+"10";
+        Boolean hasKey = redisTemplate.hasKey(cacheKey);
+        //Long maxCode=0L;
+        ValueOperations<String, Integer> operations = redisTemplate.opsForValue();
+
+        if (!hasKey) {
+            LocalDateTime now = LocalDateTime.now();
+            Long maxId = orderMapper.queryMaxId(now);
+            Long maxCode = maxId == null ? 0 : maxId;
+            operations.set(cacheKey, maxCode.intValue());
+        }
+        Long increment = operations.increment(cacheKey);
+        log.warn("获取的自增id:{}",increment);
+        return  increment;
     }
 }
