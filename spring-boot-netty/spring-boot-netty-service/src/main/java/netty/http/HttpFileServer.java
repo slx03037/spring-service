@@ -1,9 +1,12 @@
 package netty.http;
 
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.AbstractChannel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.EventLoopGroup;
+import io.netty.channel.nio.AbstractNioByteChannel;
+import io.netty.channel.nio.AbstractNioChannel;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.sctp.nio.NioSctpServerChannel;
 import io.netty.channel.socket.SocketChannel;
@@ -27,7 +30,6 @@ public class HttpFileServer {
         EventLoopGroup bossgroup = new NioEventLoopGroup();
 
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-
         try{
             ServerBootstrap b = new ServerBootstrap();
 
