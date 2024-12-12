@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/login}" method="post">
+        <div>
+            <span>用户名</span>
+            <label>
+                <input type="text" th:field="*{username}"/>
+            </label>
+            <span>密码</span>
+            <label>
+                <input type="text" th:field="*{password}"/>
+            </label>
+        </div>
+       <button type="submit">登录</button>
+    </form>
+</body>
+
+<script>
+    function onsubmit(){
+
+    }
+</script>
+</html>

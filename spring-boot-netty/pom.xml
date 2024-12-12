@@ -21,6 +21,9 @@
         <module>spring-boot-websocket-socket</module>
         <module>spring-reactor</module>
         <module>spring-boot-websocket-quartz</module>
+        <module>Spring-websocket-quartz</module>
+        <module>spring-boot-netty-module</module>
+        <module>spring-boot-netty-module/spring-boot-netty-server</module>
     </modules>
 
     <properties>

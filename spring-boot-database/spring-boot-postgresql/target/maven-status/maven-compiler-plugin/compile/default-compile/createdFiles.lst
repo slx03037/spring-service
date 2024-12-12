@@ -1,0 +1,7 @@
+com\xinwen\postgresql\Application.class
+com\xinwen\postgresql\core\service\TheftRobberyService.class
+com\xinwen\postgresql\controller\TheftRobberyController.class
+com\xinwen\postgresql\core\mapper\TheftRobberyMapper.class
+com\xinwen\postgresql\core\service\impl\TheftRobberyServiceImpl.class
+com\xinwen\postgresql\config\InitProcessLoadRunner.class
+com\xinwen\postgresql\core\entity\TheftRobbery.class
