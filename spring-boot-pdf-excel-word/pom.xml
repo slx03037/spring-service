@@ -3,16 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>spring-boot-easyexcel</module>
-        <module>spring-boot-download-upload</module>
         <module>spring-boot-pdf-box</module>
-        <module>spring-boot-word-poi</module>
-        <module>spring-boot-word-poi-tl</module>
-        <module>spring-boot-excel-easypoi</module>
-        <module>spring-boot-file-online</module>
-        <module>spring-boot-file-poi-tl-report</module>
         <module>spring-boot-pdf-word</module>
-        <module>spring-boot-minio</module>
         <module>spring-boot-text-pdf</module>
     </modules>
     <parent>

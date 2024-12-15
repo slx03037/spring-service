@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE com.xinwen.mybatis.node01.mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-com.xinwen.mybatis.node01.mapper.dtd">
+<com.xinwen.mybatis.node01.mapper namespace="com.shenlx.xinwen.springboot.schedule.com.xinwen.mybatis.node01.mapper.local.AdditionalMapper">
+    <resultMap id="BaseResultMap" type="com.shenlx.xinwen.springboot.schedule.entity.Additional">
+        <id column="FImei" jdbcType="BIGINT" property="fimei" />
+        <result column="FUserName" jdbcType="VARCHAR" property="fusername" />
+        <result column="FUserCer" jdbcType="VARCHAR" property="fusercer" />
+        <result column="FCarNumber" jdbcType="VARCHAR" property="fCarNumber" />
+        <result column="FImgPeriod" jdbcType="VARCHAR" property="fimgperiod" />
+        <result column="FImgCar" jdbcType="VARCHAR" property="fimgcar" />
+        <result column="FPeriodTime" jdbcType="INTEGER" property="fperiodtime" />
+        <result column="FPeriodParam" jdbcType="BIGINT" property="fperiodparam" />
+        <result column="FInsureCompany" jdbcType="VARCHAR" property="finsurecompany" />
+        <result column="FBuyDate" jdbcType="VARCHAR" property="fbuydate" />
+        <result column="FAppFlag" jdbcType="BIGINT" property="fappflag" />
+        <result column="FAddAccount" jdbcType="VARCHAR" property="faddaccount" />
+        <result column="FCreateTime" jdbcType="BIGINT" property="fcreatetime" />
+        <result column="FModifyTime" jdbcType="BIGINT" property="fmodifytime" />
+        <result column="FCheckDate" jdbcType="VARCHAR" property="fcheckdate" />
+        <result column="FBckPhone" jdbcType="VARCHAR" property="fbckphone" />
+        <result column="FFrameNum" jdbcType="VARCHAR" property="fframenum" />
+        <result column="FCarType" jdbcType="VARCHAR" property="fcartype" />
+        <result column="FImgFrameNum" jdbcType="VARCHAR" property="fimgframenum" />
+        <result column="FCarBrand" jdbcType="VARCHAR" property="fcarbrand" />
+        <result column="FImgManCar" jdbcType="VARCHAR" property="fimgmancar" />
+        <result column="FImgDevice" jdbcType="VARCHAR" property="fimgdevice" />
+        <result column="FImgDevPos" jdbcType="VARCHAR" property="fimgdevpos" />
+        <result column="FImgWirelessPos" jdbcType="VARCHAR" property="fimgwirelesspos" />
+        <result column="FAddFamily" jdbcType="BIGINT" property="faddfamily" />
+        <result column="FLoanAmount" jdbcType="BIGINT" property="floanamount" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        t.FImei, t.FUserName, t.FUserCer, t.FImgPeriod, t.FImgCar, t.FPeriodTime, t.FPeriodParam, t.FInsureCompany,
+    t.FBuyDate, t.FAppFlag, t.FAddAccount, t.FCreateTime, t.FModifyTime, t.FCheckDate, t.FBckPhone,
+    t.FFrameNum, t.FCarType, t.FImgFrameNum, t.FCarBrand, t.FImgManCar, t.FImgDevice, t.FImgDevPos,
+    t.FImgWirelessPos, t.FAddFamily, t.FLoanAmount,d.FCarNumber
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_device_additional_0031 t
+        left join  t_garagebinddevice_0031 d
+        on t.FImei=d.FImei
+        limit #{offset},#{pageSize}
+    </select>
+
+</com.xinwen.mybatis.node01.mapper>

@@ -1,0 +1,6 @@
+com\xinwen\ehcache\service\impl\UserServiceImpl.class
+com\xinwen\ehcache\Application.class
+com\xinwen\ehcache\controller\UserController.class
+com\xinwen\ehcache\mapper\UserMapper.class
+com\xinwen\ehcache\domain\User.class
+com\xinwen\ehcache\service\UserService.class

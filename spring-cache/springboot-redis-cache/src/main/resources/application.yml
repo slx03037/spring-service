@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+
+
+redis:
+    host: 124.71.174.122
+    port: 8379
+    password: njhm@1234
+#    host: 192.168.3.10
+#    port: 6379
+#    password: 123456

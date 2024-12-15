@@ -1,7 +1,0 @@
-spring:
-  profiles:
-    active: test
-
-security:
-  basic:
-    enabled: true

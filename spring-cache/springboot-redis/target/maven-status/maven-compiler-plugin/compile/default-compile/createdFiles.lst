@@ -1,0 +1,7 @@
+com\xinwen\redis\config\RedisConfig.class
+com\xinwen\redis\domain\User.class
+com\xinwen\redis\controller\UserController.class
+com\xinwen\redis\service\UserService.class
+com\xinwen\redis\Application.class
+com\xinwen\redis\mapper\UserMapper.class
+com\xinwen\redis\service\impl\UserServiceImpl.class

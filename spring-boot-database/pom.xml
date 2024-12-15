@@ -8,7 +8,7 @@
   </parent>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-boot-postgresql</module>
+
     </modules>
 
     <modelVersion>4.0.0</modelVersion>

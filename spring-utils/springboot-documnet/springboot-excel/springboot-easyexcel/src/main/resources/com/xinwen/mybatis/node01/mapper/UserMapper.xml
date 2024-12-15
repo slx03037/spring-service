@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE com.xinwen.mybatis.node01.mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-com.xinwen.mybatis.node01.mapper.dtd">
+<com.xinwen.mybatis.node01.mapper namespace="spring.boot.easy.excel.com.xinwen.mybatis.node01.mapper.UserMapper">
+    <select id="excelUserList" resultType="spring.boot.easy.excel.entity.UserDO">
+  select id,
+  `username` ,
+  `password` ,
+  `nickname`,
+  `birthday` ,
+  `phone` ,
+  `height`,
+  `gender` from tbl_user
+    </select>
+</com.xinwen.mybatis.node01.mapper>

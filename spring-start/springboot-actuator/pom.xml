@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.xinwen</groupId>
+        <artifactId>spring-start</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>springboot-actuator</artifactId>
+
+    <dependencies>
+        <!--致动器，提供了对SpringBoot应用程序（可以是生产环境）监视和管理的能力， 可以选择通过使用HTTP Endpoint或使用JMX来管理和监控SpringBoot应用程序-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+        </dependency>
+    </dependencies>
+</project>
