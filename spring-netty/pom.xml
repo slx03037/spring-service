@@ -12,12 +12,17 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <properties>
+        <java.version>11</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <modules>
-
-
+        <module>springboot-netty-service</module>
         <module>springboot-netty-module</module>
         <module>springboot-socket</module>
         <module>spring-reactor</module>
+        <module>springboot-server-sent-events</module>
 
     </modules>
 

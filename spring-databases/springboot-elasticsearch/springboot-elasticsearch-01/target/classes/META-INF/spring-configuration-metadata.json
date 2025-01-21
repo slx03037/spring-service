@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "elasticsearch",
+      "type": "com.xinwen.elasticsearch.node01.config.ElasticSearchProperties",
+      "sourceType": "com.xinwen.elasticsearch.node01.config.ElasticSearchProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "elasticsearch.host",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.elasticsearch.node01.config.ElasticSearchProperties"
+    },
+    {
+      "name": "elasticsearch.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.xinwen.elasticsearch.node01.config.ElasticSearchProperties"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,31 @@
+dataSources:
+  plate:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://192.168.1.73:3306/sharding_sphere_db1?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: NJben@1234
+
+rules:
+  - !SHARDING
+#    key-generators: # 分布式ID生成算法
+#      snowflake:
+#        type: SNOWFLAKE  # 内置雪花算法，参考：org.apache.shardingsphere.sharding.algorithm.keygen.SnowflakeKeyGenerateAlgorithm
+#        props:
+#          worker-id: 100
+    tables:
+      tbl_order_info:
+        actualDataNodes: plate.tbl_order_info
+        tableStrategy:
+          standard:
+            shardingColumn: create_time
+            shardingAlgorithmName: auto-custom
+#          key-generate-strategy: # 分布式ID列，一般是主键
+#            column: order_id
+#            key-generator-name: snowflake # 使用雪花算法
+    shardingAlgorithms:
+      auto-custom:
+        type: CLASS_BASED
+        props:
+          strategy: standard
+          algorithmClassName: com.shenlx.xinwen.shardingsphere.month.config.DateShardingAlgorithm

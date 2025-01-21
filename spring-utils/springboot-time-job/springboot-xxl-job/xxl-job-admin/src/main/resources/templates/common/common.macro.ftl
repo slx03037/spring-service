@@ -40,7 +40,7 @@
 	<script src="${request.contextPath}/static/adminlte/bower_components/bootstrap/js/bootstrap.min.js"></script>
 	<!-- FastClick -->
 	<script src="${request.contextPath}/static/adminlte/bower_components/fastclick/fastclick.js"></script>
-	<!-- AdminLTE App -->
+	<!-- AdminLTE com.xinwen.App -->
 	<script src="${request.contextPath}/static/adminlte/dist/js/adminlte.min.js"></script>
 	<!-- jquery.slimscroll -->
 	<script src="${request.contextPath}/static/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>

@@ -1,0 +1,10 @@
+com\xinwen\mybatis\node02\config\MysqlDevDatasourceConfig.class
+com\xinwen\mybatis\node02\domain\User.class
+com\xinwen\mybatis\node02\mapper\dev\UserDevMapper.class
+META-INF\spring-configuration-metadata.json
+com\xinwen\mybatis\node02\Application.class
+com\xinwen\mybatis\node02\config\MysqlProdDatasourceConfig.class
+com\xinwen\mybatis\node02\service\UserService.class
+com\xinwen\mybatis\node02\mapper\prod\UserProdMapper.class
+com\xinwen\mybatis\node02\service\impl\UserServiceImpl.class
+com\xinwen\mybatis\node02\controller\UserController.class

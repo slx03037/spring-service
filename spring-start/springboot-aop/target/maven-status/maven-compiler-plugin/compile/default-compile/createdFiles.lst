@@ -1,0 +1,8 @@
+com\xinwen\aop\Application.class
+com\xinwen\aop\utils\IPUtils.class
+com\xinwen\aop\aspect\LogAspect.class
+com\xinwen\aop\controller\UserController.class
+com\xinwen\aop\annotion\Log.class
+com\xinwen\aop\domain\SysLog.class
+com\xinwen\aop\utils\HttpContextUtils.class
+com\xinwen\aop\aspect\Log2Aspect.class

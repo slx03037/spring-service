@@ -1,0 +1,6 @@
+com\xinwen\pdf\box\aspose\PdfController.class
+com\xinwen\pdf\box\itextpdf\FileController.class
+com\xinwen\pdf\box\controller\FileController.class
+com\xinwen\pdf\box\Application.class
+com\xinwen\pdf\box\box\BoxController.class
+com\xinwen\pdf\box\utils\CommonUtil.class

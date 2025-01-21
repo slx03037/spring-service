@@ -1,0 +1,9 @@
+D:\workspace\workspace-my-github\spring-service\spring-databases\springboot-jdbc\springboot-mybatis\springboot-mybatis-02\src\main\java\com\xinwen\mybatis\node02\Application.java
+D:\workspace\workspace-my-github\spring-service\spring-databases\springboot-jdbc\springboot-mybatis\springboot-mybatis-02\src\main\java\com\xinwen\mybatis\node02\config\MysqlProdDatasourceConfig.java
+D:\workspace\workspace-my-github\spring-service\spring-databases\springboot-jdbc\springboot-mybatis\springboot-mybatis-02\src\main\java\com\xinwen\mybatis\node02\config\MysqlDevDatasourceConfig.java
+D:\workspace\workspace-my-github\spring-service\spring-databases\springboot-jdbc\springboot-mybatis\springboot-mybatis-02\src\main\java\com\xinwen\mybatis\node02\mapper\prod\UserProdMapper.java
+D:\workspace\workspace-my-github\spring-service\spring-databases\springboot-jdbc\springboot-mybatis\springboot-mybatis-02\src\main\java\com\xinwen\mybatis\node02\controller\UserController.java
+D:\workspace\workspace-my-github\spring-service\spring-databases\springboot-jdbc\springboot-mybatis\springboot-mybatis-02\src\main\java\com\xinwen\mybatis\node02\domain\User.java
+D:\workspace\workspace-my-github\spring-service\spring-databases\springboot-jdbc\springboot-mybatis\springboot-mybatis-02\src\main\java\com\xinwen\mybatis\node02\mapper\dev\UserDevMapper.java
+D:\workspace\workspace-my-github\spring-service\spring-databases\springboot-jdbc\springboot-mybatis\springboot-mybatis-02\src\main\java\com\xinwen\mybatis\node02\service\UserService.java
+D:\workspace\workspace-my-github\spring-service\spring-databases\springboot-jdbc\springboot-mybatis\springboot-mybatis-02\src\main\java\com\xinwen\mybatis\node02\service\impl\UserServiceImpl.java

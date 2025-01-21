@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE com.xinwen.mybatis.node01.mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-com.xinwen.mybatis.node01.mapper.dtd">
+<com.xinwen.mybatis.node01.mapper namespace="com.shenlx.xinwen.springboot.schedule.com.xinwen.mybatis.node01.mapper.bellon.RegistryMapper">
+    <resultMap id="BaseResultMap" type="com.shenlx.xinwen.springboot.schedule.entity.RegistryDO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="plate_type" jdbcType="INTEGER" property="plateType"/>
+        <result column="vehicle_use" jdbcType="INTEGER" property="vehicleUse"/>
+        <result column="tid" jdbcType="VARCHAR" property="tid"/>
+        <result column="plate_no" jdbcType="VARCHAR" property="plateNo"/>
+        <result column="use_type" jdbcType="INTEGER" property="useType"/>
+        <result column="register_time" jdbcType="TIMESTAMP" property="registerTime"/>
+        <result column="buy_tIme" jdbcType="TIMESTAMP" property="buyTime"/>
+        <result column="vin" jdbcType="VARCHAR" property="vin"/>
+        <result column="owner_name" jdbcType="VARCHAR" property="ownerName"/>
+        <result column="sex" jdbcType="INTEGER" property="sex"/>
+        <result column="card_id" jdbcType="VARCHAR" property="cardId"/>
+        <result column="phone_num" jdbcType="VARCHAR" property="phoneNum"/>
+        <result column="insurance_company_id" jdbcType="VARCHAR" property="insuranceCompanyId"/>
+        <result column="is_theft_insurance" jdbcType="INTEGER" property="isTheftInsurance"/>
+        <result column="is_triple_liability_insurance" jdbcType="INTEGER" property="isTripleLiabilityInsurance"/>
+        <result column="is_additional_driver_insurance" jdbcType="INTEGER" property="isAdditionalDriverInsurance"/>
+        <result column="is_low_income" jdbcType="INTEGER" property="isLowIncome"/>
+        <result column="insurance_years" jdbcType="INTEGER" property="insuranceYears"/>
+        <result column="insurance_pic" jdbcType="VARCHAR" property="insurancePic"/>
+        <result column="card_id_face_pic" jdbcType="VARCHAR" property="cardIdFacePic"/>
+        <result column="card_id_back_pic" jdbcType="VARCHAR" property="cardIdBackPic"/>
+        <result column="vehicle_pic" jdbcType="VARCHAR" property="vehiclePic"/>
+        <result column="organ" jdbcType="VARCHAR" property="organ"/>
+        <result column="region" jdbcType="VARCHAR" property="region"/>
+        <result column="standard" jdbcType="INTEGER" property="standard"/>
+        <result column="product_certificate_no" jdbcType="VARCHAR" property="productCertificateNo"/>
+        <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo"/>
+        <result column="vehicle_status" jdbcType="INTEGER" property="vehicleStatus"/>
+        <result column="product_business_name" jdbcType="VARCHAR" property="productBusinessName"/>
+        <result column="vehicle_color" jdbcType="VARCHAR" property="vehicleColor"/>
+        <result column="sale_business_name" jdbcType="VARCHAR" property="saleBusinessName"/>
+        <result column="owner_address" jdbcType="VARCHAR" property="ownerAddress"/>
+        <result column="area_name" jdbcType="INTEGER" property="areaName"/>
+        <result column="belong_place" jdbcType="VARCHAR" property="belongPlace"/>
+        <result column="create_name" jdbcType="VARCHAR" property="createName"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="update_name" jdbcType="VARCHAR" property="updateName"/>
+        <result column="del_flag" jdbcType="BIGINT" property="delFlag"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="java.util.List">
+        insert into tbl_registry_info
+        ( plate_type
+        , vehicle_use
+        , tid
+        , plate_no
+        , use_type
+        , register_time
+        , buy_tIme
+        , vin
+        , owner_name
+        , sex
+        , card_id
+        , phone_num
+        , insurance_company_id
+        , is_theft_insurance
+        , is_triple_liability_insurance
+        , is_additional_driver_insurance
+        , is_low_income
+        , insurance_years
+        , insurance_pic
+        , card_id_face_pic
+        , card_id_back_pic
+        , vehicle_pic
+        , vehicle_status
+        , area_name
+        , belong_place
+        , create_name
+        , create_time
+        , update_time
+        , update_name)
+        values
+        <foreach collection="list" item="item" separator=",">
+            ( #{item.plateType,jdbcType=INTEGER}
+            , #{item.vehicleUse,jdbcType=INTEGER}
+            , 1000
+            , #{item.plateNo,jdbcType=VARCHAR}
+            , #{item.useType,jdbcType=INTEGER}
+            , #{item.registerTime,jdbcType=TIMESTAMP}
+            , #{item.buyTime,jdbcType=TIMESTAMP}
+            , #{item.vin,jdbcType=VARCHAR}
+            , #{item.ownerName,jdbcType=VARCHAR}
+            , #{item.sex,jdbcType=INTEGER}
+            , #{item.cardId,jdbcType=VARCHAR}
+            , #{item.phoneNum,jdbcType=INTEGER}
+            , #{item.insuranceCompanyId,jdbcType=VARCHAR}
+            , #{item.isTheftInsurance,jdbcType=INTEGER}
+            , #{item.isTripleLiabilityInsurance,jdbcType=INTEGER}
+            , #{item.isAdditionalDriverInsurance,jdbcType=INTEGER}
+            , #{item.isLowIncome,jdbcType=INTEGER}
+            , #{item.insuranceYears,jdbcType=INTEGER}
+            ,"","","",""
+            , #{item.vehicleStatus,jdbcType=INTEGER}
+            , #{item.areaName,jdbcType=VARCHAR}
+            , #{item.belongPlace,jdbcType=VARCHAR}
+            , #{item.createName,jdbcType=VARCHAR}
+            , #{item.createTime,jdbcType=TIMESTAMP}
+            , #{item.updateTime,jdbcType=TIMESTAMP}
+            , #{item.updateName,jdbcType=VARCHAR})
+        </foreach>
+    </insert>
+    <insert id="insertSelective" parameterType="com.shenlx.xinwen.springboot.schedule.entity.RegistryDO">
+        insert into tbl_registry_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="plateType != null">
+                plate_type,
+            </if>
+            <if test="vehicleUse != null">
+                vehicle_use,
+            </if>
+            <if test="tid != null">
+                tid,
+            </if>
+            <if test="plateNo != null">
+                plate_no,
+            </if>
+            <if test="useType != null">
+                use_type,
+            </if>
+            <if test="registerTime != null">
+                register_time,
+            </if>
+            <if test="buyTime != null">
+                buy_tIme,
+            </if>
+            <if test="vin != null">
+                vin,
+            </if>
+            <if test="ownerName != null">
+                owner_name,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="cardId != null">
+                card_id,
+            </if>
+            <if test="phoneNum != null">
+                phone_num,
+            </if>
+            <if test="insuranceCompanyId != null">
+                insurance_company_id,
+            </if>
+            <if test="isTheftInsurance != null">
+                is_theft_insurance,
+            </if>
+            <if test="isTripleLiabilityInsurance != null">
+                is_triple_liability_insurance,
+            </if>
+            <if test="isAdditionalDriverInsurance != null">
+                is_additional_driver_insurance,
+            </if>
+            <if test="isLowIncome != null">
+                is_low_income,
+            </if>
+            <if test="insuranceYears != null">
+                insurance_years,
+            </if>
+            <if test="insurancePic != null">
+                insurance_pic,
+            </if>
+            <if test="cardIdFacePic != null">
+                card_id_face_pic,
+            </if>
+            <if test="cardIdBackPic != null">
+                card_id_back_pic,
+            </if>
+            <if test="vehiclePic != null">
+                vehicle_pic,
+            </if>
+            <if test="organ != null">
+                organ,
+            </if>
+            <if test="region != null">
+                region,
+            </if>
+            <if test="standard != null">
+                standard,
+            </if>
+            <if test="productCertificateNo != null">
+                product_certificate_no,
+            </if>
+            <if test="certificateNo != null">
+                certificate_no,
+            </if>
+            <if test="vehicleStatus != null">
+                vehicle_status,
+            </if>
+            <if test="productBusinessName != null">
+                product_business_name,
+            </if>
+            <if test="vehicleColor != null">
+                vehicle_color,
+            </if>
+            <if test="saleBusinessName != null">
+                sale_business_name,
+            </if>
+            <if test="ownerAddress != null">
+                owner_address,
+            </if>
+            <if test="areaName != null">
+                area_name,
+            </if>
+            <if test="belongPlace != null">
+                belong_place,
+            </if>
+            <if test="createName != null">
+                create_name,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="updateName != null">
+                update_name,
+            </if>
+            <if test="delFlag != null">
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="plateType != null">
+                #{plateType,jdbcType=INTEGER},
+            </if>
+            <if test="vehicleUse != null">
+                #{vehicleUse,jdbcType=INTEGER},
+            </if>
+            <if test="tid != null">
+                #{tid,jdbcType=VARCHAR},
+            </if>
+            <if test="plateNo != null">
+                #{plateNo,jdbcType=VARCHAR},
+            </if>
+            <if test="useType != null">
+                #{useType,jdbcType=INTEGER},
+            </if>
+            <if test="registerTime != null">
+                #{registerTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="buyTime != null">
+                #{buyTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="vin != null">
+                #{vin,jdbcType=VARCHAR},
+            </if>
+            <if test="ownerName != null">
+                #{ownerName,jdbcType=VARCHAR},
+            </if>
+            <if test="sex != null">
+                #{sex,jdbcType=INTEGER},
+            </if>
+            <if test="cardId != null">
+                #{cardId,jdbcType=VARCHAR},
+            </if>
+            <if test="phoneNum != null">
+                #{phoneNum,jdbcType=INTEGER},
+            </if>
+            <if test="insuranceCompanyId != null">
+                #{insuranceCompanyId,jdbcType=VARCHAR},
+            </if>
+            <if test="isTheftInsurance != null">
+                #{isTheftInsurance,jdbcType=INTEGER},
+            </if>
+            <if test="isTripleLiabilityInsurance != null">
+                #{isTripleLiabilityInsurance,jdbcType=INTEGER},
+            </if>
+            <if test="isAdditionalDriverInsurance != null">
+                #{isAdditionalDriverInsurance,jdbcType=INTEGER},
+            </if>
+            <if test="isLowIncome != null">
+                #{isLowIncome,jdbcType=INTEGER},
+            </if>
+            <if test="insuranceYears != null">
+                #{insuranceYears,jdbcType=INTEGER},
+            </if>
+            <if test="insurancePic != null">
+                #{insurancePic,jdbcType=VARCHAR},
+            </if>
+            <if test="cardIdFacePic != null">
+                #{cardIdFacePic,jdbcType=VARCHAR},
+            </if>
+            <if test="cardIdBackPic != null">
+                #{cardIdBackPic,jdbcType=VARCHAR},
+            </if>
+            <if test="vehiclePic != null">
+                #{vehiclePic,jdbcType=VARCHAR},
+            </if>
+            <if test="organ != null">
+                #{organ,jdbcType=VARCHAR},
+            </if>
+            <if test="region != null">
+                #{region,jdbcType=VARCHAR},
+            </if>
+            <if test="standard != null">
+                #{standard,jdbcType=INTEGER},
+            </if>
+            <if test="productCertificateNo != null">
+                #{productCertificateNo,jdbcType=VARCHAR},
+            </if>
+            <if test="certificateNo != null">
+                #{certificateNo,jdbcType=VARCHAR},
+            </if>
+            <if test="vehicleStatus != null">
+                #{vehicleStatus,jdbcType=INTEGER},
+            </if>
+            <if test="productBusinessName != null">
+                #{productBusinessName,jdbcType=VARCHAR},
+            </if>
+            <if test="vehicleColor != null">
+                #{vehicleColor,jdbcType=VARCHAR},
+            </if>
+            <if test="saleBusinessName != null">
+                #{saleBusinessName,jdbcType=VARCHAR},
+            </if>
+            <if test="ownerAddress != null">
+                #{ownerAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="areaName != null">
+                #{areaName,jdbcType=VARCHAR},
+            </if>
+            <if test="belongPlace != null">
+                #{belongPlace,jdbcType=VARCHAR},
+            </if>
+            <if test="createName != null">
+                #{createName,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateName != null">
+                #{updateName,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null">
+                #{delFlag,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+
+</com.xinwen.mybatis.node01.mapper>

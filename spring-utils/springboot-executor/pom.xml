@@ -13,6 +13,7 @@
         <module>springboot-thread-pool</module>
         <module>springboot-completablefuture</module>
         <module>springboot-async</module>
+        <module>springboot-threadlocal-async</module>
     </modules>
 
 </project>

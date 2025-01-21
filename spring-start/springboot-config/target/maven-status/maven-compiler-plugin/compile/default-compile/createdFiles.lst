@@ -1,0 +1,5 @@
+com\xinwen\config\controller\TestController.class
+com\xinwen\config\bean\TestConfigBean.class
+com\xinwen\config\Application.class
+com\xinwen\config\bean\PrefixPropertiesArrayBeans.class
+com\xinwen\config\bean\PropertiesGetBean.class

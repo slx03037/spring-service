@@ -1,0 +1,4 @@
+com\xinwen\thymeleaf\controller\IndexController.class
+com\xinwen\thymeleaf\Application.class
+com\xinwen\thymeleaf\bean\User.class
+com\xinwen\thymeleaf\bean\Account.class

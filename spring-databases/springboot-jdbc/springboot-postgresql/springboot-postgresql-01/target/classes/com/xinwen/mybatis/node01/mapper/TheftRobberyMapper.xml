@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE com.xinwen.mybatis.node01.mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-com.xinwen.mybatis.node01.mapper.dtd">
+<com.xinwen.mybatis.node01.mapper namespace="com.xinwen.postgresql.node01.core.com.xinwen.mybatis.node01.mapper.TheftRobberyMapper">
+
+    <select id="countAll" resultType="java.lang.Integer">
+        select count(*) from view_bdddc_aj
+    </select>
+
+    <select id="query" parameterType="java.lang.String" resultType="com.xinwen.postgresql.node01.core.entity.TheftRobbery" >
+        select MD_MD AS mdId,WPGG AS wpgg , WPZT as wpzt from view_bdddc_aj where WPGG=#{wpgg}
+    </select>
+</com.xinwen.mybatis.node01.mapper>

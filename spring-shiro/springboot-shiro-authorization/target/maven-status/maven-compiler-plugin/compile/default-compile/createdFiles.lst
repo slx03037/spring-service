@@ -1,0 +1,13 @@
+com\xinwen\shiro\authorization\dao\UserMapper.class
+com\xinwen\shiro\authorization\config\ShiroConfig.class
+com\xinwen\shiro\authorization\dao\UserPermissionMapper.class
+com\xinwen\shiro\authorization\config\shiro\ShiroRealm.class
+com\xinwen\shiro\authorization\entity\Permission.class
+com\xinwen\shiro\authorization\entity\Role.class
+com\xinwen\shiro\authorization\dao\UserRoleMapper.class
+com\xinwen\shiro\authorization\entity\User.class
+com\xinwen\shiro\authorization\utils\MD5Utils.class
+com\xinwen\shiro\authorization\controller\LoginController.class
+com\xinwen\shiro\authorization\resp\ResponseBo.class
+com\xinwen\shiro\authorization\controller\UserController.class
+com\xinwen\shiro\authorization\Application.class

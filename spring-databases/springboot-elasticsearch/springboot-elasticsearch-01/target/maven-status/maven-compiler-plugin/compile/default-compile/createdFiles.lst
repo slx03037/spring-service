@@ -1,0 +1,15 @@
+com\xinwen\elasticsearch\node01\controller\AddController.class
+com\xinwen\elasticsearch\node01\controller\DeleteController.class
+com\xinwen\elasticsearch\node01\entity\Goods.class
+com\xinwen\elasticsearch\node01\controller\QueryController.class
+com\xinwen\elasticsearch\node01\entity\Product.class
+com\xinwen\elasticsearch\node01\entity\User.class
+META-INF\spring-configuration-metadata.json
+com\xinwen\elasticsearch\node01\config\ElasticSearchProperties.class
+com\xinwen\elasticsearch\node01\controller\SupeQueryController.class
+com\xinwen\elasticsearch\node01\config\ElasticsearchClientConfig.class
+com\xinwen\elasticsearch\node01\entity\Goods2.class
+com\xinwen\elasticsearch\node01\Application.class
+com\xinwen\elasticsearch\node01\controller\IndexController.class
+com\xinwen\elasticsearch\node01\controller\AddController$1.class
+com\xinwen\elasticsearch\node01\controller\UpdateController.class

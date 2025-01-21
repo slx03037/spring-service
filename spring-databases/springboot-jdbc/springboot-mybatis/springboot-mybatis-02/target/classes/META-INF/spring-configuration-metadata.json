@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.druid.devdb",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.xinwen.mybatis.node02.config.MysqlDevDatasourceConfig",
+      "sourceMethod": "mysqlDataSource()"
+    },
+    {
+      "name": "spring.datasource.druid.proddb",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.xinwen.mybatis.node02.config.MysqlProdDatasourceConfig",
+      "sourceMethod": "mysqlDataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

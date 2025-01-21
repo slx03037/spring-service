@@ -9,6 +9,11 @@
 
     <artifactId>springboot-redis-cache</artifactId>
 
+    <properties>
+        <java.version>11</java.version>
+        <mybatis.spring.boot.version>2.1.4</mybatis.spring.boot.version>
+        <mysql-connector.version>8.0.29</mysql-connector.version>
+    </properties>
     <dependencies>
         <!-- Redisson依赖 -->
         <dependency>
@@ -21,6 +26,23 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis.spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.15</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

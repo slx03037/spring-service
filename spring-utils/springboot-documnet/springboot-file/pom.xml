@@ -11,5 +11,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>springboot-file-online</module>
+        <module>springboot-upload-download</module>
     </modules>
 </project>

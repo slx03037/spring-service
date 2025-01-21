@@ -24,9 +24,9 @@ import javax.sql.DataSource;
 @MapperScan(basePackages = MysqlBellonDatasourceConfig.PACKAGE, sqlSessionFactoryRef = "mysqlBellonSqlSessionFactory")
 public class MysqlBellonDatasourceConfig {
     //数据源配置的 prod 扫描的路径
-    static final  String PACKAGE="com.shenlx.xinwen.springboot.schedule.com.xinwen.mybatis.node01.mapper.bellon";
+    static final  String PACKAGE=" com.xinwen.schedule.mapper.bellon";
     //mybatis mapper扫描路径
-    static final String MAPPER_LOCATION = "classpath*:com.xinwen.mybatis.node01.mapper/bellon/*.xml";
+    static final String MAPPER_LOCATION = "classpath*:mapper/bellon/*.xml";
 
     @Primary
     @Bean(name = "mysqlBellonDatasource")

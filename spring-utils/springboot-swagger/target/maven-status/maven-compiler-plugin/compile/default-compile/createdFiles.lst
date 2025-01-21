@@ -1,0 +1,12 @@
+com\xinwen\swagger\entity\AddressVo$AddressVoBuilder.class
+com\xinwen\swagger\config\entity\SwaggerProperties$SwaggerEntity.class
+com\xinwen\swagger\Application.class
+com\xinwen\swagger\entity\AddressVo.class
+com\xinwen\swagger\config\entity\SwaggerProperties.class
+com\xinwen\swagger\controller\UserController.class
+com\xinwen\swagger\entity\UserVo$UserVoBuilder.class
+META-INF\spring-configuration-metadata.json
+com\xinwen\swagger\entity\UserVo.class
+com\xinwen\swagger\config\SwaggerConfig.class
+com\xinwen\swagger\entity\UserParam.class
+com\xinwen\swagger\response\ResponseStatus.class

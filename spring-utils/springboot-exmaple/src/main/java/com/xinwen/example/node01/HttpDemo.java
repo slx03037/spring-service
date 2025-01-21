@@ -169,4 +169,33 @@ public class HttpDemo {
         //CloseableHttpClient client = HttpClients.custom().setRetryHandler((e, i, c) -> false).build();
     }
 
+
+    public static void main(String[]args){
+        //int s= 757500;
+        int s= 1010698;
+        //int f=1009211-1009058;
+
+        int count =1;
+        int count1=1;
+
+        int s2=7*170;
+        int s3=9*130;
+        System.out.println(s2+"---"+s3);
+
+        while(count<130){
+            s++;
+            String s1 = String.valueOf(s);
+            //System.out.println(s1);
+            if(!s1.contains("4")){
+                System.out.println("运行次数:"+count+"结果:"+s);
+                count++;
+            }else {
+                System.out.println("----运行次数:"+count1+"结果:"+s);
+                count1++;
+            }
+        }
+        //System.out.println(f);
+    }
+
+
 }

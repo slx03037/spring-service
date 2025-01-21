@@ -24,9 +24,9 @@ import javax.sql.DataSource;
 @Configuration
 public class MysqlLocalDatasourceConfig {
     //数据源配置的 prod 扫描的路径
-    static final  String PACKAGE="com.shenlx.xinwen.springboot.schedule.com.xinwen.mybatis.node01.mapper.local";
+    static final  String PACKAGE="com.xinwen.schedule.mapper.local";
     //mybatis mapper扫描路径
-    static final String MAPPER_LOCATION = "classpath*:com.xinwen.mybatis.node01.mapper/local/*.xml";
+    static final String MAPPER_LOCATION = "classpath*:mapper/local/*.xml";
 
     @Primary
     @Bean(name = "mysqlLocalDatasource")

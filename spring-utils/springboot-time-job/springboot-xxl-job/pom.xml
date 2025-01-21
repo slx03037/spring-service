@@ -98,7 +98,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>${maven-gpg-plugin.version}</version>
+                        <version>3.0.1</version>
                         <configuration>
                             <useAgent>false</useAgent>
                         </configuration>
@@ -116,13 +116,15 @@
             <distributionManagement>
                 <snapshotRepository>
                     <id>oss</id>
+
                     <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                 </snapshotRepository>
-                <repository>
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/com.xinwen.mybatis.node01.service/local/staging/deploy/maven2/</url>
-                </repository>
+<!--                <repository>-->
+<!--                    <id>oss</id>-->
+<!--                    <url>https://oss.sonatype.org/com.xinwen.mybatis.node01.service/local/staging/deploy/maven2/</url>-->
+<!--                </repository>-->
             </distributionManagement>
         </profile>
     </profiles>
+
 </project>

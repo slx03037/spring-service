@@ -1,0 +1,10 @@
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-validation\src\main\java\com\xinwen\validation\exception\UserNotExistException.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-validation\src\main\java\com\xinwen\validation\advice\ExceptionRsHandler.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-validation\src\main\java\com\xinwen\validation\aspect\Validate.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-validation\src\main\java\com\xinwen\validation\domain\Article2DTO.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-validation\src\main\java\com\xinwen\validation\domain\ArticleDTO.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-validation\src\main\java\com\xinwen\validation\domain\AuthorDTO2Validate.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-validation\src\main\java\com\xinwen\validation\advice\GlobalExceptionHandler.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-validation\src\main\java\com\xinwen\validation\controller\UserController.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-validation\src\main\java\com\xinwen\validation\Application.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-validation\src\main\java\com\xinwen\validation\handler\ConstraintValidatorHandler.java
