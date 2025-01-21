@@ -1,0 +1,6 @@
+com\xinwen\jwt\advice\PermissionHandler.class
+com\xinwen\jwt\model\Result.class
+com\xinwen\jwt\controller\TokenController.class
+com\xinwen\jwt\interceptor\TokenInterceptor.class
+com\xinwen\jwt\Application.class
+com\xinwen\jwt\prop\JwtConfig.class

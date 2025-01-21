@@ -1,0 +1,7 @@
+com\xinwen\shiro\authentication\config\shiro\ShiroRealm.class
+com\xinwen\shiro\authentication\entity\User.class
+com\xinwen\shiro\authentication\utils\MD5Utils.class
+com\xinwen\shiro\authentication\config\ShiroConfig.class
+com\xinwen\shiro\authentication\controller\UserController.class
+com\xinwen\shiro\authentication\resp\ResponseBo.class
+com\xinwen\shiro\authentication\Application.class

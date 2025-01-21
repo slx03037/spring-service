@@ -1,0 +1,6 @@
+com\xinwen\condition\config\ConditionContextSon.class
+com\xinwen\condition\config\CustomConfig.class
+com\xinwen\condition\domain\Person.class
+com\xinwen\condition\Application.class
+com\xinwen\condition\config\LinuxCondition.class
+com\xinwen\condition\config\WindowsCondition.class

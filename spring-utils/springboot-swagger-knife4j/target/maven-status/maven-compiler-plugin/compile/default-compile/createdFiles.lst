@@ -1,0 +1,9 @@
+com\xinwen\swagger\knife4j\Application.class
+com\xinwen\swagger\knife4j\entity\AddressVo.class
+com\xinwen\swagger\knife4j\config\OpenApiConfig.class
+com\xinwen\swagger\knife4j\entity\UserVo$UserVoBuilder.class
+com\xinwen\swagger\knife4j\entity\UserVo.class
+com\xinwen\swagger\knife4j\entity\AddressVo$AddressVoBuilder.class
+com\xinwen\swagger\knife4j\enums\ResponseStatus.class
+com\xinwen\swagger\knife4j\entity\UserParam.class
+com\xinwen\swagger\knife4j\controller\AddressController.class

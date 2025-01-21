@@ -1,0 +1,6 @@
+com\xinwen\filter\config\FilterConfig.class
+com\xinwen\filter\Application.class
+com\xinwen\filter\controller\UserController.class
+com\xinwen\filter\filter\Time2Filter.class
+com\xinwen\filter\filter\TimeFilter.class
+com\xinwen\filter\filter\CrosFilter.class

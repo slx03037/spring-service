@@ -16,13 +16,13 @@
     <module>springboot-ehcache</module>
     <module>springboot-redis</module>
     <module>springboot-redis-cache</module>
+      <module>springboot-caffeine</module>
   </modules>
 
   <properties>
     <java.version>11</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <mybatis.spring.boot.version>2.1.4</mybatis.spring.boot.version>
-    <mysql-connector.version>8.0.29</mysql-connector.version>
+
   </properties>
 
   <dependencies>
@@ -47,22 +47,7 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>${mysql-connector.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mybatis.spring.boot</groupId>
-      <artifactId>mybatis-spring-boot-starter</artifactId>
-      <version>${mybatis.spring.boot.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>druid</artifactId>
-      <version>1.2.15</version>
-      <scope>compile</scope>
-    </dependency>
+
 
     <!--添加本地缓存-->
     <dependency>

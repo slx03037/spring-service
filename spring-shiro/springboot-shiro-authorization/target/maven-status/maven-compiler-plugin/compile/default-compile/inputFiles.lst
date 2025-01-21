@@ -1,0 +1,14 @@
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\entity\User.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\dao\UserPermissionMapper.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\utils\MD5Utils.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\handler\GlobalExceptionHandler.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\controller\LoginController.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\dao\UserMapper.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\entity\Permission.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\Application.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\config\shiro\ShiroRealm.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\entity\Role.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\resp\ResponseBo.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\config\ShiroConfig.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\controller\UserController.java
+D:\workspace\workspace-my-github\spring-service\spring-shiro\springboot-shiro-authorization\src\main\java\com\xinwen\shiro\authorization\dao\UserRoleMapper.java

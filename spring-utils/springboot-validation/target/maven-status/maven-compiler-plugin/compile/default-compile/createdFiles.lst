@@ -1,0 +1,12 @@
+com\xinwen\validation\advice\GlobalExceptionHandler.class
+com\xinwen\validation\domain\AuthorDTO2Validate.class
+com\xinwen\validation\aspect\Validate.class
+com\xinwen\validation\domain\Article2DTO.class
+com\xinwen\validation\exception\UserNotExistException.class
+com\xinwen\validation\advice\ExceptionRsHandler.class
+com\xinwen\validation\Application.class
+com\xinwen\validation\domain\ArticleDTO.class
+com\xinwen\validation\handler\ConstraintValidatorHandler.class
+com\xinwen\validation\domain\Article2DTO$UpdateArticleDTO.class
+com\xinwen\validation\controller\UserController.class
+com\xinwen\validation\domain\Article2DTO$AddArticleDTO.class

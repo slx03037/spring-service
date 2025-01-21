@@ -1,0 +1,11 @@
+com\xinwen\schedule\config\MysqlLocalDatasourceConfig.class
+com\xinwen\schedule\mapper\bellon\RegistryMapper.class
+com\xinwen\schedule\config\ScheduleConfig.class
+com\xinwen\schedule\entity\RegistryDO.class
+com\xinwen\schedule\service\DataMigrationService.class
+com\xinwen\schedule\Application.class
+com\xinwen\schedule\config\MysqlBellonDatasourceConfig.class
+com\xinwen\schedule\mapper\local\AdditionalMapper.class
+com\xinwen\schedule\entity\Additional.class
+com\xinwen\schedule\jobs\HeartbeatJob.class
+com\xinwen\schedule\mapper\DataMigrationMapper.class

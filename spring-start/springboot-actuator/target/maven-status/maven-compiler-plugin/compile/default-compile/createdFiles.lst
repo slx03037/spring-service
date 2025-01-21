@@ -1,0 +1,4 @@
+com\xinwen\actuator\controller\CustomEndpointController.class
+com\xinwen\actuator\health\CustomHealthIndicator.class
+com\xinwen\actuator\Application.class
+com\xinwen\actuator\config\MySecurityConfiguration.class

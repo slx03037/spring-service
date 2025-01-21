@@ -13,6 +13,7 @@
   <artifactId>spring-start</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
+
   <modules>
     <module>springboot-actuator</module>
     <module>springboot-admin</module>
@@ -20,6 +21,8 @@
       <module>springboot-aop</module>
     <module>springboot-config</module>
     <module>springboot-filter-interceptor-listener</module>
+      <module>springboot-start-service</module>
+      <module>spring-code-service</module>
   </modules>
 
   <properties>

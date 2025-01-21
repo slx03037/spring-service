@@ -1,0 +1,8 @@
+com\xinwen\generator\uid\config\WorkerNodeConfig.class
+com\xinwen\generator\uid\controller\WorkerNodeServiceController.class
+com\xinwen\generator\uid\service\IWorkerNodeService.class
+com\xinwen\generator\uid\Application.class
+com\xinwen\generator\uid\service\impl\WorkerNodeServiceImpl.class
+com\xinwen\generator\uid\entity\WorkerNode.class
+com\xinwen\generator\uid\mapper\WorkerNodeMapper.class
+com\xinwen\generator\uid\config\DisposableWorkerIdAssigner.class

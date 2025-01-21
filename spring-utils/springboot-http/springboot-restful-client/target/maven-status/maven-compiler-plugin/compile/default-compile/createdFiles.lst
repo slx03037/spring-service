@@ -1,0 +1,4 @@
+com\xinwen\restful\client\controller\MessageGetController.class
+com\xinwen\restful\client\entity\UserDo.class
+com\xinwen\restful\client\Application.class
+com\xinwen\restful\client\model\Result.class

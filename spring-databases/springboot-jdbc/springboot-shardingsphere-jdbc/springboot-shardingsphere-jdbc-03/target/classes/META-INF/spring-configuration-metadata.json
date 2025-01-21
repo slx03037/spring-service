@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.druid.master",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.xinwen.shardingsphere.jdbc.node03.datasource.DruidConfig",
+      "sourceMethod": "masterDataSource(com.xinwen.shardingsphere.jdbc.node03.config.prop.DruidProperties)"
+    },
+    {
+      "name": "spring.datasource.druid.shardsource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.xinwen.shardingsphere.jdbc.node03.config.ShardingDataSourceConfig",
+      "sourceMethod": "shardDataSource(com.xinwen.shardingsphere.jdbc.node03.config.prop.DruidProperties)"
+    },
+    {
+      "name": "spring.datasource.druid.slave",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.xinwen.shardingsphere.jdbc.node03.datasource.DruidConfig",
+      "sourceMethod": "slaveDataSource(com.xinwen.shardingsphere.jdbc.node03.config.prop.DruidProperties)"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

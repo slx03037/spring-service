@@ -1,0 +1,7 @@
+com\xinwen\mybatis\node01\mapper\UserMapper.class
+com\xinwen\mybatis\node01\domain\User.class
+com\xinwen\mybatis\node01\Application.class
+com\xinwen\mybatis\node01\service\impl\UserServiceImpl.class
+com\xinwen\mybatis\node01\controller\UserController.class
+com\xinwen\mybatis\node01\service\UserService.class
+com\xinwen\mybatis\node01\mode\Result.class

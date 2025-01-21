@@ -30,6 +30,9 @@
         <module>springboot-documnet</module>
         <module>springboot-executor</module>
         <module>springboot-time-job</module>
+        <module>springboot-generate-code</module>
+        <module>springboot-grizzly</module>
+        <module>springboot-dgraph4j</module>
 
 
     </modules>

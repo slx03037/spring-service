@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.druid.devdb",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.xinwen.jdbc.template.config.DataSourceConfig",
+      "sourceMethod": "dataSourceOne()"
+    },
+    {
+      "name": "spring.datasource.druid.proddb",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.xinwen.jdbc.template.config.DataSourceConfig",
+      "sourceMethod": "dataSourceTwo()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

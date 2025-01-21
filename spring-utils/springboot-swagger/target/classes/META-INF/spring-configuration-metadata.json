@@ -1,0 +1,112 @@
+{
+  "groups": [
+    {
+      "name": "spring.swagger",
+      "type": "com.xinwen.swagger.config.entity.SwaggerProperties",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties"
+    },
+    {
+      "name": "spring.swagger.back",
+      "type": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties"
+    },
+    {
+      "name": "spring.swagger.front",
+      "type": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.swagger.back.base-package",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.back.contact-email",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.back.contact-name",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.back.contact-url",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.back.description",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.back.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.back.group-name",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.back.title",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.back.version",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.front.base-package",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.front.contact-email",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.front.contact-name",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.front.contact-url",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.front.description",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.front.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.front.group-name",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.front.title",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    },
+    {
+      "name": "spring.swagger.front.version",
+      "type": "java.lang.String",
+      "sourceType": "com.xinwen.swagger.config.entity.SwaggerProperties$SwaggerEntity"
+    }
+  ],
+  "hints": []
+}

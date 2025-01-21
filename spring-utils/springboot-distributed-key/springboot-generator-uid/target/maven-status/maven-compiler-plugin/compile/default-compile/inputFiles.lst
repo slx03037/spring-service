@@ -1,0 +1,8 @@
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-distributed-key\springboot-generator-uid\src\main\java\com\xinwen\generator\uid\Application.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-distributed-key\springboot-generator-uid\src\main\java\com\xinwen\generator\uid\entity\WorkerNode.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-distributed-key\springboot-generator-uid\src\main\java\com\xinwen\generator\uid\mapper\WorkerNodeMapper.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-distributed-key\springboot-generator-uid\src\main\java\com\xinwen\generator\uid\service\impl\WorkerNodeServiceImpl.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-distributed-key\springboot-generator-uid\src\main\java\com\xinwen\generator\uid\config\DisposableWorkerIdAssigner.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-distributed-key\springboot-generator-uid\src\main\java\com\xinwen\generator\uid\service\IWorkerNodeService.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-distributed-key\springboot-generator-uid\src\main\java\com\xinwen\generator\uid\controller\WorkerNodeServiceController.java
+D:\workspace\workspace-my-github\spring-service\spring-utils\springboot-distributed-key\springboot-generator-uid\src\main\java\com\xinwen\generator\uid\config\WorkerNodeConfig.java

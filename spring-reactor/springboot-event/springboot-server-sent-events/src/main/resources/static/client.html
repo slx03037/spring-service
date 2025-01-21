@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1>SSE Demo</h1>
+<div id="messages"></div>
+<script>
+    const eventSource =new EventSource('http://localhost:8081/sse/handleSse');
+    constmessages =document.getElementById('message');
+    eventSource.onmessage=function(event) {
+        const message =document.createElement('p');
+        message.textContent= event.data;
+        messages.appendChild(message);
+    };
+    eventSource.onerror=function(error) {
+        console.error('EventSource failed:'+error);
+        eventSource.close();
+    };
+</script>
+</body>
+</html>

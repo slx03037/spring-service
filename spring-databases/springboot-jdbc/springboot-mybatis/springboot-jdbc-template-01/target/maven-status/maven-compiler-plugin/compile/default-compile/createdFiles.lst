@@ -1,0 +1,8 @@
+com\xinwen\jdbc\template\dao\impl\UserDaoImpl.class
+com\xinwen\jdbc\template\dao\UserDao.class
+com\xinwen\jdbc\template\service\UserService.class
+com\xinwen\jdbc\template\mapper\UserMapper.class
+com\xinwen\jdbc\template\service\impl\UserServiceImpl.class
+com\xinwen\jdbc\template\domain\User.class
+com\xinwen\jdbc\template\Application.class
+com\xinwen\jdbc\template\controller\UserController.class

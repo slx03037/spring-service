@@ -1,0 +1,3 @@
+com\xinwen\security\config\SecurityConfig.class
+com\xinwen\security\Application.class
+com\xinwen\security\controller\TestController.class

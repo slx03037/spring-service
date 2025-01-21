@@ -14,6 +14,7 @@
         <module>springboot-shardingsphere-jdbc-03</module>
         <module>springboot-shardingsphere-jdbc-04</module>
         <module>springboot-shardingsphere-jdbc-05</module>
+        <module>springboot-shardingsphere-mybatis-plus</module>
     </modules>
 
     <dependencies>

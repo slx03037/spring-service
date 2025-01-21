@@ -1,0 +1,8 @@
+com\xinwen\jackson\domain\User$AllUserFieldView.class
+com\xinwen\jackson\config\JacksonConfig.class
+com\xinwen\jackson\config\UserSerializer.class
+com\xinwen\jackson\config\UserDeserializer.class
+com\xinwen\jackson\domain\User.class
+com\xinwen\jackson\controller\JsonController.class
+com\xinwen\jackson\Application.class
+com\xinwen\jackson\domain\User$UserNameView.class
