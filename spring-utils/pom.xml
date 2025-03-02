@@ -33,6 +33,7 @@
         <module>springboot-generate-code</module>
         <module>springboot-grizzly</module>
         <module>springboot-dgraph4j</module>
+        <module>springboot-jgrapht</module>
 
 
     </modules>

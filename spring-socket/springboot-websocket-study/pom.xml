@@ -12,9 +12,7 @@
         <module>springboot-websocket-webflux</module>
         <module>springboot-websocket-webmvc</module>
         <module>springboot-websocket-Javax</module>
-        <module>springboot-websocket-java-websocket</module>
         <module>springboot-websocket-socketio</module>
-        <module>springboot-websocket-netty</module>
     </modules>
 
     <dependencies>
