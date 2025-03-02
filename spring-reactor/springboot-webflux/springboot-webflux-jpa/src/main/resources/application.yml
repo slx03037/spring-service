@@ -1,0 +1,16 @@
+spring:
+  r2dbc:
+    url: r2dbc:mysql://47.110.154.49:3306/db_test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8    #&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: bellon.123
+    pool:
+      enabled: true
+      initial-size: 10
+      validation-query: select 1
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8001

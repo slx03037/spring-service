@@ -14,5 +14,6 @@
         <module>springboot-websocket-server-simple</module>
         <module>springboot-websocket-simple-sever</module>
         <module>springboot-websocket-server-netty</module>
+        <module>springboot-websocket-webRTC</module>
     </modules>
 </project>

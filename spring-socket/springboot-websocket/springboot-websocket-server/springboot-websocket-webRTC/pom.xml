@@ -3,14 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xinwen</groupId>
-        <artifactId>springboot-websocket-webflux</artifactId>
+        <artifactId>springboot-websocket-server</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>springboot-webflux-websocket</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>springboot-webflux-websocket-simple</module>
-        <module>springboot-webflux-websocket-urimapping</module>
-    </modules>
+    <artifactId>springboot-websocket-webRTC</artifactId>
+    <name>Archetype - springboot-websocket-webRTC</name>
 
 </project>
