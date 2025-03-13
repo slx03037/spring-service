@@ -1,0 +1,4 @@
+com\xinwen\websocket\webmvc\Application.class
+com\xinwen\websocket\webmvc\handler\ServletWebSocketClientHandler.class
+com\xinwen\websocket\webmvc\config\WebSocketConnectionManagerConfig.class
+com\xinwen\websocket\webmvc\controller\TestController.class

@@ -1,0 +1,3 @@
+com\xinwen\websocket\server\controller\WsServerController.class
+com\xinwen\websocket\server\server\WsServer.class
+com\xinwen\websocket\server\Application.class

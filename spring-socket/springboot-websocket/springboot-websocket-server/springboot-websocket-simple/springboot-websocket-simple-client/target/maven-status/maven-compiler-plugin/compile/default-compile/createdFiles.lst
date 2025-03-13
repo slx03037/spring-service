@@ -1,0 +1,4 @@
+com\xinwen\websocket\client\Application.class
+com\xinwen\websocket\client\config\WsClientConfig$1.class
+com\xinwen\websocket\client\config\WsClientConfig.class
+com\xinwen\websocket\client\controller\WsClientController.class

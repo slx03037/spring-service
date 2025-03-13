@@ -1,0 +1,6 @@
+com\xiwen\websocket\webmvc\controller\TestController.class
+com\xiwen\websocket\webmvc\handler\PrefixUrlPathHelper.class
+com\xiwen\websocket\webmvc\interceptor\ServletWebSocketHandshakeInterceptor.class
+com\xiwen\websocket\webmvc\Application.class
+com\xiwen\websocket\webmvc\config\ServletWebSocketServerConfigurer.class
+com\xiwen\websocket\webmvc\handler\ServletWebSocketServerHandler.class

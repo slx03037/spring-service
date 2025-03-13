@@ -1,0 +1,26 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /
+    encoding:
+      force-response: true
+spring:
+  application:
+    name: springboot3-shardingsphere-mybatis-plus
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+    url: jdbc:shardingsphere:classpath:sharding.yaml
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+# MyBatis 配置
+mybatis-plus:
+  config-location:  classpath:/mybatis-config.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+

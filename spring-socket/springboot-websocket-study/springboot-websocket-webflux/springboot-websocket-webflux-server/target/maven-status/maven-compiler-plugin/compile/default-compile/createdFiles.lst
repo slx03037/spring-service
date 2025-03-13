@@ -1,0 +1,6 @@
+com\xinwen\websokcet\webflux\server\config\WebSocketConfig.class
+com\xinwen\websokcet\webflux\server\config\WebConfig.class
+com\xinwen\websokcet\webflux\server\controller\WebSocketServerController.class
+com\xinwen\websokcet\webflux\server\Application.class
+com\xinwen\websokcet\webflux\server\handler\ReactiveWebSocketServerHandler.class
+com\xinwen\websokcet\webflux\server\utils\WebSocketSender.class

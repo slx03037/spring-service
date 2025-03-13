@@ -1,0 +1,4 @@
+com\xinwen\websocket\server\WebSocketServer.class
+com\xinwen\websocket\Application.class
+com\xinwen\websocket\config\WebSocketConfig.class
+com\xinwen\websocket\controller\WebSocketController.class

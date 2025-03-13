@@ -1,0 +1,44 @@
+dataSources:
+  dbs0:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    dataSourceClassName: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.158.1.73:3306/dks?useUnicode=true&useSSL=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+    username: root
+    password: NJben@1234
+  dbs1:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    dataSourceClassName: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.158.1.173:3306/dks?useUnicode=true&useSSL=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+    username: root
+    password: NJben@1234
+
+# 规则配置部分
+rules:
+  # 分片规则配置
+  - !SHARDING
+  # 需要进行分片的表配置
+    tables:
+      flight:
+      # 实际的数据节点配置，这里表示flight表被分片到ds0的flight_0和flight_1两个表中
+      actualDataNodes: ds0.student_$->{0..1}
+      # 分片策略配置
+      tableStrategy:
+      # 使用标准分片策略
+        standard:
+          # 分片列，这里表示根据id列进行分片
+          shardingColumn: id
+          # 分片算法名称，与下面的shardingAlgorithms配置对应
+          shardingAlgorithmName: student-id-inline
+    # 分片算法配置
+    shardingAlgorithms:
+      student-id-inline:
+      # 使用内联表达式分片算法
+      type: INLINE
+      # 算法属性配置
+      props:
+      # 内联表达式，这里表示id对2取模，结果用于选择分片表flight_0或flight_1
+        algorithm-expression: student_$->{id % 2}
+    # 规则的其他属性配置
+    props:
+      # 是否打印SQL语句，用于调试
+      sql-show: true

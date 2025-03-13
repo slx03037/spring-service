@@ -1,0 +1,9 @@
+<archetype>
+  <id>springboot-tcp-udp</id>
+  <sources>
+    <source>src/main/java/com.xinwen.App.java</source>
+  </sources>
+  <testSources>
+    <source>src/test/java/AppTest.java</source>
+  </testSources>
+</archetype>

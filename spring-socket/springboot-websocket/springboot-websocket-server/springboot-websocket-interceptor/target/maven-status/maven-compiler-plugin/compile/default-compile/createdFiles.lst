@@ -1,0 +1,4 @@
+com\xinwen\websocket\interceptor\handler\HandShakeInterceptorHandler.class
+com\xinwen\websocket\interceptor\config\WebSocketConfig.class
+com\xinwen\websocket\interceptor\handler\MyWebSocketHandler.class
+com\xinwen\websocket\interceptor\Application.class

@@ -1,0 +1,6 @@
+#context:
+#  initializer:
+#    classes: com.xinwen.start.node01.applicationcontextinitializer.TestApplicationContextInitializer
+spring:
+  application:
+    name: spring-bean

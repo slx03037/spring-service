@@ -1,0 +1,8 @@
+com\xiwen\websocket\weflux\client\config\ReactiveWebSocketClient.class
+com\xiwen\websocket\weflux\client\config\WebConfig.class
+com\xiwen\websocket\weflux\client\handler\ReactiveWebSocketClientHandler.class
+com\xiwen\websocket\weflux\client\utils\JsonUtils$ParametricTypes.class
+com\xiwen\websocket\weflux\client\Application.class
+com\xiwen\websocket\weflux\client\utils\JsonUtils.class
+com\xiwen\websocket\weflux\client\utils\WsWrap.class
+com\xiwen\websocket\weflux\client\controller\WebSocketClientController.class
